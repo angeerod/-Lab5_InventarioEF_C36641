@@ -1,0 +1,49 @@
+@model IEnumerable<Laboratorio05.Models.Producto>
+
+@{
+    ViewData["Title"] = "Productos";
+}
+
+<h1>Catálogo de Productos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Agregar Producto</a>
+</p>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        <strong>No hay productos registrados.</strong>
+    </div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Fecha de Ingreso</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nombre</td>
+                    <td>@item.Precio.ToString("C")</td>
+                    <td>@item.Categoria</td>
+                    <td>@item.FechaIngreso.ToString("dd/MM/yyyy")</td>
+                    <td>@(item.Activo ? "Activo" : "Inactivo")</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

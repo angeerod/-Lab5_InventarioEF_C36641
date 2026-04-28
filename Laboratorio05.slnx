@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Laboratorio05.BL/Laboratorio05.BL.csproj" />
+  <Project Path="Laboratorio05.DA/Laboratorio05.DA.csproj" />
+  <Project Path="Laboratorio05.Models/Laboratorio05.Models.csproj" />
+  <Project Path="Laboratorio05.UI/Laboratorio05.UI.csproj" />
+</Solution>

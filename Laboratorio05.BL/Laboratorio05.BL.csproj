@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Laboratorio05.Models\Laboratorio05.Models.csproj" />
+    <ProjectReference Include="..\Laboratorio05.DA\Laboratorio05.DA.csproj" />
+  </ItemGroup>
+
+</Project>
